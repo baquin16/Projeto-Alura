@@ -1,1 +1,136 @@
 
+        :root {
+            --primary-lnf: #0056b3;
+            --primary-bra: #15723b;
+            --dark: #212529;
+            --accent: #ffc107;
+            --bg-card: #ffffff;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f6f9;
+            color: var(--dark);
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .header-title {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .header-title h1 {
+            margin: 5px 0;
+            color: #111;
+        }
+        .header-title p {
+            color: #666;
+            margin: 0;
+        }
+        /* Sistema de Abas (Tabs) */
+        .tabs {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+        .tab-btn {
+            padding: 12px 25px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            border-radius: 30px;
+            background-color: #ddd;
+            color: #555;
+            transition: all 0.3s ease;
+        }
+        .tab-btn.active.lnf-tab {
+            background-color: var(--primary-lnf);
+            color: white;
+        }
+        .tab-btn.active.bra-tab {
+            background-color: var(--primary-bra);
+            color: white;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        /* Grid de Conteúdo */
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+        @media(min-width: 992px) {
+            .grid { grid-template-columns: 2fr 1fr; }
+        }
+        .card {
+            background: var(--bg-card);
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            margin-bottom: 20px;
+        }
+        .card h2 {
+            margin-top: 0;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #eee;
+            font-size: 20px;
+        }
+        .lnf-content h2 { color: var(--primary-lnf); border-color: rgba(0,86,179,0.2); }
+        .bra-content h2 { color: var(--primary-bra); border-color: rgba(21,114,59,0.2); }
+        /* Tabelas */
+        .table-responsive {
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 12px 10px;
+            text-align: left;
+            border-bottom: 1px solid #dee2e6;
+            font-size: 14px;
+        }
+        th {
+            color: white;
+        }
+        .lnf-content th { background-color: var(--primary-lnf); }
+        .bra-content th { background-color: var(--primary-bra); }
+        tr:hover { background-color: rgba(0,0,0,0.01); }
+        .highlight-lnf { background-color: #e2f0fe; font-weight: bold; }
+        .highlight-bra { background-color: #e2f3e8; font-weight: bold; }
+        /* Listas laterais */
+        .list-group {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .list-group-item {
+            padding: 12px 15px;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 14px;
+        }
+        .list-group-item:last-child { border-bottom: none; }
+        .badge {
+            background-color: var(--accent);
+            color: var(--dark);
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 12px;
+        }
+        .badge-bra {
+            background-color: #e2f3e8;
+            color: var(--primary-bra);
+        }
